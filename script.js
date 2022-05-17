@@ -6,11 +6,11 @@ var steps=0;
 var indBlock_old = 5;
 var blockItem = 0;
 var rows=1;
-var n=1; //отображение изумрудов
+var n=1; //Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГҐ ГЁГ§ГіГ¬Г°ГіГ¤Г®Гў
 var many=[ ];
 var ostatok=30;
 for (i = 1; i < 17; i++) {
-    many[i] = 0; //0-пусто,1-изумруд
+    many[i] = 0; //0-ГЇГіГ±ГІГ®,1-ГЁГ§ГіГ¬Г°ГіГ¤
 }
 for(i=1;i<6;i++){
     indCoin=Math.floor(Math.random()*15+1);
@@ -19,14 +19,14 @@ for(i=1;i<6;i++){
     many[indCoin]=1;
 }
 
-//колечки
+//ГЄГ®Г«ГҐГ·ГЄГЁ
 for(i=1;i<6;i++){
     idImg=document.getElementById('heart'+i);
     idImg.src="img/ring.png";
 }
 
 
-//ландшафт
+//Г«Г Г­Г¤ГёГ ГґГІ
 pole0_0.src="img/block6.png";
 pole0_16.src="img/block6.png";
 pole_blocks[0] = 5;
@@ -76,7 +76,7 @@ function shadow_move(event){
                 rows = 2;
                 idImg = document.getElementById('pole' + rows + '_' + steps);
                 if(many[steps]==1){ 
-                    //игрок берёт монетку
+                    //ГЁГЈГ°Г®ГЄ ГЎГҐГ°ВёГІ Г¬Г®Г­ГҐГІГЄГі
                                         idImg1=document.getElementById('coin'+n);
                                         idImg1.src="img/emerald.png";
                                         n++;
@@ -94,7 +94,7 @@ function shadow_move(event){
                     rows = 2;}
                 idImg = document.getElementById('pole' + rows + '_' + steps);
                 if(many[steps]==1){ 
-                    //игрок берёт монетку
+                    //ГЁГЈГ°Г®ГЄ ГЎГҐГ°ВёГІ Г¬Г®Г­ГҐГІГЄГі
                                         idImg1=document.getElementById('coin'+n);
                                         idImg1.src="img/emerald.png";
                                         n++;
@@ -166,7 +166,7 @@ function check(){
     ostatok--;
      ost_time.innerHTML="Seconds left: " +ostatok
      if(ostatok<=0){
-        window.open("lose.htm")
+        window.open("htm/lose.htm")
         window.close()
         clearInterval(interval)
      }
